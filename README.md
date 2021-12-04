@@ -52,8 +52,6 @@ El objetivo del proyecto es implementar y empaquetar un ** Producto de Datos** c
 
 ## Estructura del Repositorio
 
-## Estructura del Repositorio
-
 ```
 ├── README.md          <- The top-level README for developers using this project.
 │
