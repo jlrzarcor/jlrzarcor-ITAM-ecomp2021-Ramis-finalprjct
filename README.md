@@ -8,7 +8,7 @@
 ---
 
 # Proyecto: Creación de un Producto de Datos
-**Integrantes del equipo** :tw-1f1e8::tw-1f1f7:   :tw-1f1ea::tw-1f1e7:  :tw-1f1fa::tw-1f1e6: :tw-1f1ef::tw-1f1f1:
+**Integrantes del equipo**
 
 | Nombre                          |     CU   | Mail             | Usuario Gh                                    |
 | :-----------------------------: | :------: | :--------------: | :-------------------------------------------: |
