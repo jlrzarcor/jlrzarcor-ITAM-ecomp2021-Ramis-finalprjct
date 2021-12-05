@@ -8,7 +8,7 @@
 ---
 
 # Proyecto: Creación de un Producto de Datos
-**Integrantes del equipo**
+:busts_in_silhouette:  **Integrantes del equipo** 
 
 | Nombre                          |     CU   | Mail             | Usuario Gh                                    |
 | :-----------------------------: | :------: | :--------------: | :-------------------------------------------: |
@@ -18,7 +18,7 @@
 | José Luis Roberto Zárate Cortés | 183347   | jzaratec@itam.mx | [jlrzarcor](https://github.com/jlrzarcor)     |
 
 ---
-## Estadísticas del repositorio  :chart_with_upwards_trend:  :chart_with_downwards_trend:
+## :chart_with_upwards_trend:   Estadísticas del repositorio   :chart_with_downwards_trend:
 
 👀  ![Watching](https://img.shields.io/badge/Watching-3-blue/?logo=GitHub&style=social)
 🌟  ![Stars](https://img.shields.io/badge/Stars-4-blue/?logo=GitHub&style=social)
@@ -27,30 +27,30 @@
 
 ---
 
-## Tabla de contenido  :floppy_disk:
+## Tabla de contenido  :bookmark_tabs:
 
 1. [Objetivo](https://github.com/jlrzarcor/ITAM-dpa2021#acerca-de-este-proyecto--globe_with_meridians)
 2. [Herramientas utilizadas](https://github.com/jlrzarcor/ITAM-dpa2021#estructura-b%C3%A1sica-del-proyecto--file_folder)
 3. [Estructura del Repositorio](https://github.com/jlrzarcor/ITAM-dpa2021#sobre-nuestro-data-pipeline--microscope)
 4. [El Producto de Datos](https://github.com/jlrzarcor/ITAM-dpa2021/blob/main/README.md#sesgos-e-inequidades-open_hands)
-	4.1 [Problema que resuelve]()
-	4.2 [Funcionamiento]()
-	4.3 [Resultados]()
-5. [¿Cómo correr el proyecto?*](https://github.com/jlrzarcor/ITAM-dpa2021/blob/main/README.md#c%C3%B3mo-ejecutar-nuestro-pipeline-%EF%B8%8F-)
+- 4.1 [Problema que resuelve]()
+- 4.2 [Funcionamiento]()
+- 4.3 [Resultados]()
+5. [¿Cómo correr el proyecto?](https://github.com/jlrzarcor/ITAM-dpa2021/blob/main/README.md#c%C3%B3mo-ejecutar-nuestro-pipeline-%EF%B8%8F-)
 
 ---
 
-## Objetivo
-El objetivo del proyecto es implementar y empaquetar un ** Producto de Datos** completo, para que se pongan en práctica las herramientas revisadas durante el curso de Estadística Computacional.
+## Objetivo  :dart:
+El objetivo del proyecto es implementar y empaquetar un **Producto de Datos** completo, para que se pongan en práctica las herramientas revisadas durante el curso de Estadística Computacional.
 
-## Herramientas utilizadas
+## Herramientas utilizadas  :wrench:
 [Bash](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html "Bash") Lo utilizamos para hacer la descarga y limpieza de los datos utilizados
 [Python](https://docs.python.org/3/) Es el lenguaje de programación que se utilizó para implementar un modelo de clasificación binaria 
 [SQL -PostgreSQL](https://www.postgresql.org/docs/9.3/sql.html) Manejador de base de datos empleada para el almacenamiento y procesamiento de la información recolectada
 [APIs -Flask](https://flask.palletsprojects.com/en/2.0.x/) Interfase elegida para hacer las interacciones entre los usuarios y el producto de datos
 [Docker](https://docs.docker.com/) Herramienta para la creación de contenedores de Linux que se utiliza para empaquetar todo el producto de datos y pueda ser utilizado en cualquier equipo de cómputo que cumpla con los [requerimientos](falta)
 
-## Estructura del Repositorio
+## Estructura del Repositorio  :open_file_folder:
 
 ```
 ├── README.md          <- The top-level README for developers using this project.
@@ -88,14 +88,14 @@ El objetivo del proyecto es implementar y empaquetar un ** Producto de Datos** c
     │
     └── pipeline       <- Functions used for the pipeline.  
 ```
-## El Producto de Datos
+## El Producto de Datos  :computer:
 
 Se pide un producto de datos completo, esto es, que tenga todos los componentes necesarios para que sea un análisis vivo y creciente de la información que va llegando al modelo de aprendizaje de máquina (modelo en adelante) y se logre cumplir con la finalidad para que fue diseñado.
 
-### Problema que resuelve
+### Problema que resuelve  :grey_question:
 Es de nuestro interés (didáctico) generar un producto de datos que nos permita tener un flujo de trabajo implementado de manera completa en una aplicación. Con esta aplicación le daremos servicio (hipotéticamente) a una empresa que se dedica a la aseguranza de vehículos tipo [caravana](https://helloauto.com/glosario/caravana) y requiere saber **¿Cuáles personas, de una cartera de clientes que han adquirido este tipo de vehículos, estarían interesados en adquirir un seguro?**.
 
-### Especificaciones
+### Especificaciones  :clipboard:
 Se solicita que la aplicación contenga los siguientes requisitos:
  - **Base de Datos de soporte:** Los datos deben de guardarse en un postgreSQL, esto para replicar la necesidad de motores externos de bases de datos en la vida real.
  - **Ingesta inicial.** La primer insersión de los datos a su base de datos debe de ser a través de Bash.
@@ -104,7 +104,7 @@ Se solicita que la aplicación contenga los siguientes requisitos:
  - **Ambiente totalmente reproducible.** La API debe estar empaquetada por completo para que pueda correr sin ningún problema en cualquier computadora.
  - **Captura de resultados del Modelo.** Se busca entender el rendimiento y precisión del modelo, por ello es necasio desplegar sus resultados de desempeño, tal que el equipo de ciencia de datos pueda entender qué tan bien o mal está respondiendo.
 
-### Funcionamiento
+### Funcionamiento  :video_game:
 La información con la que se cuenta es una base de datos que proviene de la compañía _Sentient Machine Research_ y esta disponible en la página de [kaggle](https://www.kaggle.com/uciml/caravan-insurance-challenge). Este _Data Set_ cuenta con aproximadamente 10,000 observaciones de 86 variables. Las variables que se tienen son de tipo socio-demográficas, de propietarios de vehículos tipo caravana, así como de estadísticas de seguros. cada observación corresponde a la de un código postal (granularidad).
 
 Con esta base de datos (**ingesta inicial**) se entrena un modelo de regresión logística mediante el paquete de _Sklearn_ de _Python_ y se calculan sus métricas de desempeño con un set de validación que también es parte del _Data Set_ mencionado. Para poder hacer predicciones de nuevos registros, se deberán ingresar los campos que se determinaron en el proceso de modelado a través de una interfase creada en _Flask_ (una API). Para cada nueva observación que se ingrese mediante la API se hará la predicción con el modelo que resultó del entrenamiento. A esta interfase de la API le denominamos predicciones _On Demand_. Esta parte de la solución se utilizará por la empresa para identificar potenciales compradores de seguros y realizar campañas y/o estrategias de venta, con el fin de incrementar la venta de este tipo de seguros.
@@ -115,4 +115,31 @@ Por separado, existirá otra API (también creada en _Flask_) que se utilizará 
 
  - Con la segunda (Entrenar), se ejecuta nuevamente el proceso de entrenamiento del modelo, utilizando los datos nuevos que se hayan almacenado en los diferentes periodos o ingestas consecutivas que se hayan realizado.
 
-### Resultados
+### Resultados  :bar_chart:
+
+Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente:
+
+- API para el modelo _On Demand_
+
+<p align = "center">
+    <img src="images/API_1.png" width="300" height="110" />
+
+- API para el proceso de ingesta consecutiva y reentrenamieto:
+
+<p align = "center">
+    <img src="images/API_2.png" width="300" height="110" />
+
+## ¿Cómo correr el proyecto? 
+
+### Prerrequisitos  :computer:
+Se necesita un equipo de computo ... con acceso a internet y las siguientes paqueterías instaladas:
+- Docker
+- Docker Hub
+
+### Ejecución  :clapper:
+	1. Clonar este repositorio en su equipo local (o servidor)
+	2. Abrir terminal en el sitio donde se descargó el repositorio del paso anterior
+	3. Encender el contenedor de Docker
+	4. ...
+	5. ...
+	
