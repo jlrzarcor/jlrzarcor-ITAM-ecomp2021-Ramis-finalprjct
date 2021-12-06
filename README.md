@@ -8,12 +8,12 @@
 ---
 
 # Proyecto: Creación de un Producto de Datos
-:busts_in_silhouette:  **Integrantes del equipo** 
+:busts_in_silhouette:  **Integrantes del equipo** git 
 
 | Nombre                          |     CU   | Mail             | Usuario Gh                                    |
 | :-----------------------------: | :------: | :--------------: | :-------------------------------------------: |
 | Carlos Roman Lopez Sierra       | 197911   | clopezsi@itam.mx | [Carlosrlpzi](https://github.com/Carlosrlpzi) |
-| Edgar Bazo Pérez                | 000000   | ebazoper@itam.mx | [EddOselotl](https://github.com/EddOselotl)   |
+| Edgar Bazo Pérez                | 172061   | ebazoper@itam.mx | [EddOselotl](https://github.com/EddOselotl)   |
 | Uriel Abraham Rangel Díaz       | 193921   | urangeld@itam.mx | [urieluard](https://github.com/urieluard)     |
 | José Luis Roberto Zárate Cortés | 183347   | jzaratec@itam.mx | [jlrzarcor](https://github.com/jlrzarcor)     |
 
