@@ -132,12 +132,12 @@ Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente
 ## ¿Cómo correr el proyecto? 
 
 ### Prerrequisitos  :computer:
-Se necesita un equipo de computo ... con acceso a internet y las siguientes paqueterías instaladas:
+Se necesita un equipo de computo con acceso a internet y un sistema operativo Linux. También se requiere tener las siguientes paqueterías instaladas:
 - Docker
 - Docker Hub
 
 ### Ejecución  :clapper:
-	1. Clonar este repositorio en su equipo local (o servidor)
+	1. Descargar la imagen de Docker de la siguiente liga
 	2. Abrir terminal en el sitio donde se descargó el repositorio del paso anterior
 	3. Encender el contenedor de Docker
 	4. ...
