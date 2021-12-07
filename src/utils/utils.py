@@ -64,3 +64,17 @@ def modelado():
     precision = metrics.precision_score(y_test, y_pred)
 
     return modelo, precision, recall
+
+    def prediccion(listas):
+        dic = {}
+        columns = ['MOPLLAAG', 'MINK123M', 'PPERSAUT', 'PWAOREG','PBRAND','APLEZIER','AFIETS']
+        for y in range(0,len(listas[0])):
+            tmp = []
+        for x in listas:
+            tmp.append(x[y])
+        dic[columns[y]] = tmp
+        df = pd.DataFrame(dic)
+        modelo, precision, recall, df_c = modelado()
+        y_pred = modelo.predict(listas)
+        df['pred'] = pd.Series(y_pred)
+        return y_pred
