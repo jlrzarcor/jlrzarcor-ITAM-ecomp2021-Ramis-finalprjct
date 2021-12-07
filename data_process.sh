@@ -3,7 +3,7 @@
 # We are about to use a code from Jeroen Janssens https://datascienceatthecommandline.com/2e/list-of-command-line-tools.html?q=dsutils#header, 
 # copy it into our project to use his header function.
 
-sudo cp src/utils/header /usr/bin/header
+cp src/utils/header /usr/bin/header
 
 curl -O https://archive.ics.uci.edu/ml/machine-learning-databases/tic-mld/tic.tar.gz
 tar -xvzf ./tic.tar.gz
@@ -120,17 +120,17 @@ cat tab_predict_ticeval.txt | tr -s ',' ' ' | tr -s '|' ',' > tab_predict_ticeva
 dos2unix tab_train_ticdata.csv
 dos2unix tab_predict_ticeval.csv
 
-csvstat ./tab_train_ticdata.csv --min -c 1:86 > stat_min_train.txt
-csvstat ./tab_train_ticdata.csv --max -c 1:86 > stat_max_train.txt
-csvstat ./tab_train_ticdata.csv --mean -c 1:86 > stat_mean_train.txt
-csvstat ./tab_train_ticdata.csv --stdev -c 1:86 > stat_stdev_train.txt
-csvstat ./tab_train_ticdata.csv --freq -c 87:91 > stat_freq_train.txt
+#csvstat ./tab_train_ticdata.csv --min -c 1:86 > stat_min_train.txt
+#csvstat ./tab_train_ticdata.csv --max -c 1:86 > stat_max_train.txt
+#csvstat ./tab_train_ticdata.csv --mean -c 1:86 > stat_mean_train.txt
+#csvstat ./tab_train_ticdata.csv --stdev -c 1:86 > stat_stdev_train.txt
+#csvstat ./tab_train_ticdata.csv --freq -c 87:91 > stat_freq_train.txt
 
-csvstat ./tab_predict_ticeval.csv --min -c 1:85 > stat_min_predic.txt
-csvstat ./tab_predict_ticeval.csv --max -c 1:85 > stat_max_predic.txt
-csvstat ./tab_predict_ticeval.csv --mean -c 1:85 > stat_mean_predic.txt
-csvstat ./tab_predict_ticeval.csv --stdev -c 1:85 > stat_stdev_predic.txt
-csvstat ./tab_predict_ticeval.csv --freq -c 87:90 > stat_freq_predic.txt
+#csvstat ./tab_predict_ticeval.csv --min -c 1:85 > stat_min_predic.txt
+#csvstat ./tab_predict_ticeval.csv --max -c 1:85 > stat_max_predic.txt
+#csvstat ./tab_predict_ticeval.csv --mean -c 1:85 > stat_mean_predic.txt
+#csvstat ./tab_predict_ticeval.csv --stdev -c 1:85 > stat_stdev_predic.txt
+#csvstat ./tab_predict_ticeval.csv --freq -c 87:90 > stat_freq_predic.txt
 
 # Search for Target Variable and Column Extract
 varloc=`egrep --binary-files=text "target variable" TicDataDescr.txt | grep -oE '\w+' | grep -n Attribute | grep -oE '\w+' | head -n1`

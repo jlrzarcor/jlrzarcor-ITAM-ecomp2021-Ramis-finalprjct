@@ -9,7 +9,7 @@
 #
 # See also: body (https://github.com/jeroenjanssens/command-line-tools-for-data-science)
 #
-# Author: http://jeroenjanssens.com
+# Author: http://jeroenjanssens.com 
 
 usage () {
 cat << EOF
