@@ -4,6 +4,7 @@
 # copy it into our project to use his header function.
 
 cp src/utils/header /usr/bin/header
+chmod 777 /usr/bin/header
 
 curl -O https://archive.ics.uci.edu/ml/machine-learning-databases/tic-mld/tic.tar.gz
 tar -xvzf ./tic.tar.gz
@@ -120,21 +121,8 @@ cat tab_predict_ticeval.txt | tr -s ',' ' ' | tr -s '|' ',' > tab_predict_ticeva
 dos2unix tab_train_ticdata.csv
 dos2unix tab_predict_ticeval.csv
 
-#csvstat ./tab_train_ticdata.csv --min -c 1:86 > stat_min_train.txt
-#csvstat ./tab_train_ticdata.csv --max -c 1:86 > stat_max_train.txt
-#csvstat ./tab_train_ticdata.csv --mean -c 1:86 > stat_mean_train.txt
-#csvstat ./tab_train_ticdata.csv --stdev -c 1:86 > stat_stdev_train.txt
-#csvstat ./tab_train_ticdata.csv --freq -c 87:91 > stat_freq_train.txt
+mv tab_predict_ticeval.csv sql/postgres_data/data_transfer
+mv tab_train_ticdata.csv sql/postgres_data/data_transfer
+mv dictionary.txt sql/postgres_data/data_transfer
 
-#csvstat ./tab_predict_ticeval.csv --min -c 1:85 > stat_min_predic.txt
-#csvstat ./tab_predict_ticeval.csv --max -c 1:85 > stat_max_predic.txt
-#csvstat ./tab_predict_ticeval.csv --mean -c 1:85 > stat_mean_predic.txt
-#csvstat ./tab_predict_ticeval.csv --stdev -c 1:85 > stat_stdev_predic.txt
-#csvstat ./tab_predict_ticeval.csv --freq -c 87:90 > stat_freq_predic.txt
-
-# Search for Target Variable and Column Extract
-varloc=`egrep --binary-files=text "target variable" TicDataDescr.txt | grep -oE '\w+' | grep -n Attribute | grep -oE '\w+' | head -n1`
-declare -i varloc
-varloc=$varloc+1
-varloc2=`egrep --binary-files=text "target variable" TicDataDescr.txt | grep -oE '\w+' | head -n $varloc | tail -1`
-cat tab_train_ticdata.csv | cut -d ',' -f $varloc2 > tar_var.csv
+rm -f L_x_h.txt TicDat_tcount.txt TicDataDescr.txt predict_col_h.txt tab_predict_ticeval.txt tab_train_ticdata.txt tic.tar.gz ticdata2000.txt ticdata2000_wh.txt ticeval2000.txt ticeval2000_wh.txt tictgts2000.txt train_col_h.txt varcatL0.txt varcatL1.txt varcatL2.txt varcatL3.txt varcatL4.txt
