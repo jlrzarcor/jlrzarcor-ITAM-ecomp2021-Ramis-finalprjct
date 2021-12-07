@@ -20,6 +20,7 @@ def get_engine(user, passwd, host, port, db):
 
 # Código utilizado para leer el archivo generado por la limpieza de Bash y pasarlo a una tabla de SQL
 df = pd.read_csv("src/temp/data_transfer/ticdata2000_wh.txt", sep = "|")
+df.headers.lowercase()
 # Credenciales del PostgreSQL que se generó con Docker
 engine = get_engine("postgres", "postgres", "db", "5432", "postgres")
 df.to_sql('clean.variables', con = engine, if_exists = 'replace') # ---> Agregamos esquema clean (revisar)
