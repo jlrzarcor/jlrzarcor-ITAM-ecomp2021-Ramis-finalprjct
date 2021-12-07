@@ -29,14 +29,15 @@
 
 ## Tabla de contenido  :bookmark_tabs:
 
-1. [Objetivo](https://github.com/jlrzarcor/ITAM-dpa2021#acerca-de-este-proyecto--globe_with_meridians)
-2. [Herramientas utilizadas](https://github.com/jlrzarcor/ITAM-dpa2021#estructura-b%C3%A1sica-del-proyecto--file_folder)
-3. [Estructura del Repositorio](https://github.com/jlrzarcor/ITAM-dpa2021#sobre-nuestro-data-pipeline--microscope)
-4. [El Producto de Datos](https://github.com/jlrzarcor/ITAM-dpa2021/blob/main/README.md#sesgos-e-inequidades-open_hands)
-- 4.1 [Problema que resuelve]()
-- 4.2 [Funcionamiento]()
-- 4.3 [Resultados]()
-5. [¿Cómo correr el proyecto?](https://github.com/jlrzarcor/ITAM-dpa2021/blob/main/README.md#c%C3%B3mo-ejecutar-nuestro-pipeline-%EF%B8%8F-)
+1. [Objetivo](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct)
+2. [Herramientas utilizadas](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct)
+3. [Estructura del Repositorio](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct)
+4. [El Producto de Datos](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct)
+- 4.1 [Problema que resuelve](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#problema-que-resuelve--grey_question)
+- 4.2 [Especificaciones](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#especificaciones--clipboard)
+- 4.3 [Funcionamiento](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#funcionamiento--video_game)
+- 4.4 [Resultados](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#resultados--bar_chart)
+5. [¿Cómo correr el proyecto?](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#c%C3%B3mo-correr-el-proyecto)
 
 ---
 
