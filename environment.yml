@@ -15,6 +15,7 @@ dependencies:
   - sqlalchemy
   - flask-sqlalchemy
   - PyYAML
+  - sqlalchemy-utils
   - pip:
       - flask-restplus
       - Werkzeug==0.16.1
