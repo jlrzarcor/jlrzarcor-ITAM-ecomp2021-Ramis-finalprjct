@@ -142,14 +142,12 @@ Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente
 ## ¿Cómo correr el proyecto? 
 
 ### Prerrequisitos  :computer:
-Se necesita un equipo de computo con acceso a internet y un sistema operativo Linux. También se requiere tener las siguientes paqueterías instaladas:
-+ Docker
-+ Docker Hub
+Se necesita un equipo de computo con acceso a internet, un sistema operativo Linux y Docker instalado.
 
 ### Ejecución  :clapper:
-	1. Descargar la imagen de Docker de la siguiente liga
-	2. Abrir terminal en el sitio donde se descargó el repositorio del paso anterior
-	3. Encender el contenedor de Docker
+	1. clonar este repositorio en la computadora local.
+	2. Correr la carpeta raíz el comando `docker-compose build`.
+	3. Correr la carpeta raíz el comando `docker-compose run`.
 	4. ...
 	5. ...
 [Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
