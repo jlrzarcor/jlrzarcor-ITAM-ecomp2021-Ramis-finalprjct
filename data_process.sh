@@ -121,8 +121,8 @@ cat tab_predict_ticeval.txt | tr -s ',' ' ' | tr -s '|' ',' > tab_predict_ticeva
 dos2unix tab_train_ticdata.csv
 dos2unix tab_predict_ticeval.csv
 
-mv tab_predict_ticeval.csv sql/postgres_data/data_transfer
-mv tab_train_ticdata.csv sql/postgres_data/data_transfer
-mv dictionary.txt sql/postgres_data/data_transfer
+mv tab_predict_ticeval.csv src/temp/data_transfer
+mv tab_train_ticdata.csv src/temp/data_transfer
+mv dictionary.txt src/temp/data_transfer
 
 rm -f L_x_h.txt TicDat_tcount.txt TicDataDescr.txt predict_col_h.txt tab_predict_ticeval.txt tab_train_ticdata.txt tic.tar.gz ticdata2000.txt ticdata2000_wh.txt ticeval2000.txt ticeval2000_wh.txt tictgts2000.txt train_col_h.txt varcatL0.txt varcatL1.txt varcatL2.txt varcatL3.txt varcatL4.txt
