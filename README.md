@@ -58,19 +58,20 @@ El objetivo del proyecto es implementar y empaquetar un **Producto de Datos** co
 ```
 ├── README.md          <- The top-level README for developers using this project.
 │
-├── references            <- Consulted references to document this proyect
-│
-├── notebooks          <- Jupyter notebooks.
-│   ├── eda
-│   └── feature_engineering
-│
 ├── images             <- Contains images used in the repository.
+|
+├── notebooks          
+│   └── eda            <- Jupyter notebooks for EDA
+|
+├── references         <- Consulted references to document this proyect
+|
+├── results            <- If so, some relevant results
+|
+├── sql                <- Contains scripts used to deploy RDS db.
 │
 ├── requirements.txt   <- The requirements file.
 │
 ├── .gitignore         <- Avoids uploading data, credentials, outputs, system files etc.
-│
-├── sql                <- Contains scripts used to deploy RDS db.
 │
 └── src                <- Source code for use in this project.
     │
