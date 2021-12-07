@@ -44,11 +44,11 @@
 El objetivo del proyecto es implementar y empaquetar un **Producto de Datos** completo, para que se pongan en práctica las herramientas revisadas durante el curso de Estadística Computacional.
 
 ## Herramientas utilizadas  :wrench:
-+ [Bash](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html "Bash") Lo utilizamos para hacer la descarga y limpieza de los datos utilizados
-+ [Python](https://docs.python.org/3/) Es el lenguaje de programación que se utilizó para implementar un modelo de clasificación binaria 
-+ [SQL -PostgreSQL](https://www.postgresql.org/docs/9.3/sql.html) Manejador de base de datos empleada para el almacenamiento y procesamiento de la información recolectada
-+ [APIs -Flask](https://flask.palletsprojects.com/en/2.0.x/) Interfase elegida para hacer las interacciones entre los usuarios y el producto de datos
-+ [Docker](https://docs.docker.com/) Herramienta para la creación de contenedores de Linux que se utiliza para empaquetar todo el producto de datos y pueda ser utilizado en cualquier equipo de cómputo que cumpla con los [requerimientos](falta)
++ [Bash](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html "Bash"): Lo utilizamos para hacer la descarga y limpieza de los datos utilizados.
++ [Python](https://docs.python.org/3/): Es el lenguaje de programación que se utilizó para implementar un modelo de clasificación binaria. 
++ [SQL -PostgreSQL](https://www.postgresql.org/docs/9.3/sql.html): Manejador de base de datos empleada para el almacenamiento y procesamiento de la información recolectada.
++ [APIs -Flask](https://flask.palletsprojects.com/en/2.0.x/): Interfase elegida para hacer las interacciones entre los usuarios y el producto de datos.
++ [Docker](https://docs.docker.com/): Herramienta para la creación de contenedores de Linux que se utiliza para empaquetar todo el producto de datos y pueda ser utilizado en cualquier equipo de cómputo que cumpla con los [requerimientos](falta).
 
 ## Estructura del Repositorio  :open_file_folder:
 
