@@ -66,6 +66,18 @@ def modelado():
     return modelo, precision, recall
 
 def prediccion(listas):
+    """
+    Esta función recibe una lista de valores que corresponden a las variables que resularon de importancia para el modelo y realiza la predicción con el modelo entrenado.
+    Cada elemento de la lista debe contener los valores de una observación completa.
+
+    Argumentos:
+        listas (list): Lista con arreglo(s) de la(s) observación(es) a la que se le quiere dar una predicción con el modelo entrenado
+        table (string): Nombre de la tabla con la información de las caravanas
+
+    Salidas:
+        y_pred (array): Elemento tipo arreglo con las etiquetas obtenidas con el modelo entrenado para las entradas solicitadas
+    
+    """
     dic = {}
     columns = ['MOPLLAAG', 'MINK123M', 'PPERSAUT', 'PWAOREG','PBRAND','APLEZIER','AFIETS']
     for y in range(0,len(listas[0])):
