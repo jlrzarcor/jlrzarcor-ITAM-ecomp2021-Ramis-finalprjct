@@ -82,7 +82,7 @@ def prediccion(listas):
     
     """
     dic = {}
-    columns = ['MOPLLAAG', 'MINK123M', 'PPERSAUT', 'PWAOREG','PBRAND','APLEZIER','AFIETS']
+    columns = ['mopllaag', 'mink123m', 'ppersaut', 'pwaoreg','pbrand','aplezier','afiets']
     for y in range(0,len(listas[0])):
         tmp = []
         for x in listas:
