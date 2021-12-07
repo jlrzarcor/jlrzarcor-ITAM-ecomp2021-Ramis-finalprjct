@@ -1,4 +1,5 @@
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 import pandas as pd
 import creds as creds
@@ -16,7 +17,7 @@ def load_data(schema, table):
         data (pandas DataFrame): Contiene un DataFrame con la información de la tabla de psql
     
     """
-    conn_string = "host="+ creds.PGHOST + " port="+ "5432" +" dbname="+ creds.PGDATABASE +" user=" + creds.PGUSER + " password="+ creds.PGPASSWORD
+    conn_string = "host="+ "db" + " port="+ "5432" +" dbname="+ "postgres" +" user=" + "postgres" + " password="+ "postgres"
     conn=psycopg2.connect(conn_string)
     cursor = conn.cursor()
     sql_command = "SELECT * FROM {}.{};".format(str(schema), str(table))
@@ -55,6 +56,8 @@ def modelado():
     
     # Entrenamiento del modelo
     modelo = logreg.fit(X_train,y_train)
+    with open("src/temp/trained_models/modelo_lf_pkl", "wb") as f:
+        pkl.dump(modelo, f)
 
     # Predicciones en el conjunto de prueba
     y_pred=logreg.predict(X_test)
