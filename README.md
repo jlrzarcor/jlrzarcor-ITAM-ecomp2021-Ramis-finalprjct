@@ -51,6 +51,8 @@ El objetivo del proyecto es implementar y empaquetar un **Producto de Datos** co
 + [APIs -Flask](https://flask.palletsprojects.com/en/2.0.x/): Interfase elegida para hacer las interacciones entre los usuarios y el producto de datos.
 + [Docker](https://docs.docker.com/): Herramienta para la creación de contenedores de Linux que se utiliza para empaquetar todo el producto de datos y pueda ser utilizado en cualquier equipo de cómputo que cumpla con los [requerimientos](falta).
 
+[Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
+
 ## Estructura del Repositorio  :open_file_folder:
 
 ```
@@ -89,6 +91,9 @@ El objetivo del proyecto es implementar y empaquetar un **Producto de Datos** co
     │
     └── pipeline       <- Functions used for the pipeline.  
 ```
+
+[Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
+	
 ## El Producto de Datos  :computer:
 
 Se pide un producto de datos completo, esto es, que tenga todos los componentes necesarios para que sea un análisis vivo y creciente de la información que va llegando al modelo de aprendizaje de máquina (modelo en adelante) y se logre cumplir con la finalidad para que fue diseñado.
@@ -116,6 +121,8 @@ Por separado, existirá otra API (también creada en _Flask_) que se utilizará 
 
  + Con la segunda (Entrenar), se ejecuta nuevamente el proceso de entrenamiento del modelo, utilizando los datos nuevos que se hayan almacenado en los diferentes periodos o ingestas consecutivas que se hayan realizado.
 
+[Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)	
+
 ### Resultados  :bar_chart:
 
 Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente:
@@ -130,6 +137,8 @@ Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente
 <p align = "center">
     <img src="images/API_2.png" width="300" height="110" />
 
+[Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
+	
 ## ¿Cómo correr el proyecto? 
 
 ### Prerrequisitos  :computer:
@@ -143,4 +152,4 @@ Se necesita un equipo de computo con acceso a internet y un sistema operativo Li
 	3. Encender el contenedor de Docker
 	4. ...
 	5. ...
-	
+[Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
