@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# we are about to use a code from Jeroen Janssens https://datascienceatthecommandline.com/2e/list-of-command-line-tools.html?q=dsutils#header, 
-# and move into our proyect tu use his Header function.
+# We are about to use a code from Jeroen Janssens https://datascienceatthecommandline.com/2e/list-of-command-line-tools.html?q=dsutils#header, 
+# copy it into our project to use his header function.
 
 sudo cp src/utils/header /usr/bin/header
 
