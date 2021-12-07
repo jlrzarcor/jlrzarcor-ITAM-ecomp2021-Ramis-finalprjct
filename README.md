@@ -97,12 +97,12 @@ Es de nuestro interés (didáctico) generar un producto de datos que nos permita
 
 ### Especificaciones  :clipboard:
 Se solicita que la aplicación contenga los siguientes requisitos:
- - **Base de Datos de soporte:** Los datos deben de guardarse en un postgreSQL, esto para replicar la necesidad de motores externos de bases de datos en la vida real.
- - **Ingesta inicial.** La primer insersión de los datos a su base de datos debe de ser a través de Bash.
- - **Modelo como Servicio Web.** La API debe tener un modelo corriendo a manera de servicio.
- - **Reentrenamiento del Modelo .** Pasado un tiempo y con suficientes datos nuevos, usualmente se busca un reentrenamiento del modelo, por lo cual su API debe de ser capaz de hacerlo mediante una solicitud.
- - **Ambiente totalmente reproducible.** La API debe estar empaquetada por completo para que pueda correr sin ningún problema en cualquier computadora.
- - **Captura de resultados del Modelo.** Se busca entender el rendimiento y precisión del modelo, por ello es necasio desplegar sus resultados de desempeño, tal que el equipo de ciencia de datos pueda entender qué tan bien o mal está respondiendo.
+ + **Base de Datos de soporte:** Los datos deben de guardarse en un postgreSQL, esto para replicar la necesidad de motores externos de bases de datos en la vida real.
+ + **Ingesta inicial.** La primer insersión de los datos a su base de datos debe de ser a través de Bash.
+ + **Modelo como Servicio Web.** La API debe tener un modelo corriendo a manera de servicio.
+ + **Reentrenamiento del Modelo .** Pasado un tiempo y con suficientes datos nuevos, usualmente se busca un reentrenamiento del modelo, por lo cual su API debe de ser capaz de hacerlo mediante una solicitud.
+ + **Ambiente totalmente reproducible.** La API debe estar empaquetada por completo para que pueda correr sin ningún problema en cualquier computadora.
+ + **Captura de resultados del Modelo.** Se busca entender el rendimiento y precisión del modelo, por ello es necasio desplegar sus resultados de desempeño, tal que el equipo de ciencia de datos pueda entender qué tan bien o mal está respondiendo.
 
 ### Funcionamiento  :video_game:
 La información con la que se cuenta es una base de datos que proviene de la compañía _Sentient Machine Research_ y esta disponible en la página de [kaggle](https://www.kaggle.com/uciml/caravan-insurance-challenge). Este _Data Set_ cuenta con aproximadamente 10,000 observaciones de 86 variables. Las variables que se tienen son de tipo socio-demográficas, de propietarios de vehículos tipo caravana, así como de estadísticas de seguros. cada observación corresponde a la de un código postal (granularidad).
@@ -111,20 +111,20 @@ Con esta base de datos (**ingesta inicial**) se entrena un modelo de regresión 
 
 Por separado, existirá otra API (también creada en _Flask_) que se utilizará para cargar nuevos registros a la base de datos de entrenamiento, la cual tendrá dos opciones: **Almacenar** y **Entrenar**. 
 
- - Con la primera opción (Almacenar) solo se almacenan nuevos registros en la Base de Datos, pero el modelo sigue siendo el mismo, el entrenado con la ingesta inicial. A este proceso le denominamos **ingesta consecutiva**.
+ + Con la primera opción (Almacenar) solo se almacenan nuevos registros en la Base de Datos, pero el modelo sigue siendo el mismo, el entrenado con la ingesta inicial. A este proceso le denominamos **ingesta consecutiva**.
 
- - Con la segunda (Entrenar), se ejecuta nuevamente el proceso de entrenamiento del modelo, utilizando los datos nuevos que se hayan almacenado en los diferentes periodos o ingestas consecutivas que se hayan realizado.
+ + Con la segunda (Entrenar), se ejecuta nuevamente el proceso de entrenamiento del modelo, utilizando los datos nuevos que se hayan almacenado en los diferentes periodos o ingestas consecutivas que se hayan realizado.
 
 ### Resultados  :bar_chart:
 
 Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente:
 
-- API para el modelo _On Demand_
++ API para el modelo _On Demand_
 
 <p align = "center">
     <img src="images/API_1.png" width="300" height="110" />
 
-- API para el proceso de ingesta consecutiva y reentrenamieto:
++ API para el proceso de ingesta consecutiva y reentrenamieto:
 
 <p align = "center">
     <img src="images/API_2.png" width="300" height="110" />
@@ -133,8 +133,8 @@ Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente
 
 ### Prerrequisitos  :computer:
 Se necesita un equipo de computo con acceso a internet y un sistema operativo Linux. También se requiere tener las siguientes paqueterías instaladas:
-- Docker
-- Docker Hub
++ Docker
++ Docker Hub
 
 ### Ejecución  :clapper:
 	1. Descargar la imagen de Docker de la siguiente liga
