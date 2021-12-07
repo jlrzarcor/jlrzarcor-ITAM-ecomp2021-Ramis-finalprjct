@@ -3,8 +3,7 @@
 # we are about to use a code from Jeroen Janssens https://datascienceatthecommandline.com/2e/list-of-command-line-tools.html?q=dsutils#header, 
 # and move into our proyect tu use his Header function.
 
-sudo mkdir /usr/bin/dsutils
-sudo cp src/utils/header /usr/bin/dsutils/header
+sudo cp src/utils/header /usr/bin/header
 
 curl -O https://archive.ics.uci.edu/ml/machine-learning-databases/tic-mld/tic.tar.gz
 tar -xvzf ./tic.tar.gz
