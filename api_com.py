@@ -42,7 +42,8 @@ def user():
 @app.route("/users", methods=["POST", "GET"])
 def users():
     if request.method == "GET":
-        return "dummy"
+        modelo, precision, recall = utils.modelado(1)
+        return "El modelo se ha reentrenado adecuadamente"
     if request.method == "POST":
         inputs = request.json
         predecir = inputs["predecir"]

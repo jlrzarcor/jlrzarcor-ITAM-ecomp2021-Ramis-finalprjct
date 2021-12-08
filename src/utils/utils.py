@@ -1,9 +1,10 @@
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 import pandas as pd
-import creds as creds
+from sklearn.linear_model import LogisticRegression
+#import creds as creds
 import pickle as pkl
+import psycopg2
 
 def load_data(schema, table):
     """
@@ -24,7 +25,7 @@ def load_data(schema, table):
     data = pd.read_sql(sql_command, conn)
     return data
 
-def modelado():
+def modelado(a=0):
     """
     Esta función recibe un conjunto de datos previamente procesado y descargado de la web mediante Bash para entrenar un modelo de regresión logística. 
     Debido a que este es un ejercicio didáctico donde no se evalúa la parte de modelado, se omite el paso de selección de variables (Feature Engineering) 
@@ -44,10 +45,12 @@ def modelado():
     #df_train_test = pd.read_csv("../../ticdata2000_wh.txt", sep = "|")
     
     # Selección de variables de acuerdo al artículo
-    feature_cols = ['mopllaag', 'mink123m', 'ppersaut', 'pwaoreg','pbrand','aplezier','afiets']
+    feature_cols = ['mopllaag', 'mink123m', 'ppersaut', 'pwaoreg','pbrand','aplezier','afiets','caravan']
+
     
     # Separación del conjunto en entrenamiento y prueba (75% de los datos para entrenar el modelo)
     X = df_train_test[feature_cols]
+
     y = df_train_test.caravan
     X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.25,random_state=0)
 
@@ -56,12 +59,16 @@ def modelado():
     
     # Entrenamiento del modelo
     modelo = logreg.fit(X_train,y_train)
-    with open("src/temp/trained_models/modelo_lf_pkl", "wb") as f:
-        pkl.dump(modelo, f)
-
+    if a == 0:
+        with open("src/temp/trained_models/modelo_lr_pkl", "wb") as f:
+            pkl.dump(modelo, f)
+    else:
+        with open("jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct/src/temp/trained_models/modelo_lr_pkl", "wb") as f:
+            pkl.dump(modelo, f)
+            
     # Predicciones en el conjunto de prueba
     y_pred=logreg.predict(X_test)
-
+    
     # Métricas resultantes del modelo
     recall = metrics.recall_score(y_test, y_pred)
     precision = metrics.precision_score(y_test, y_pred)
@@ -82,7 +89,7 @@ def prediccion(listas):
     
     """
     dic = {}
-    columns = ['mopllaag', 'mink123m', 'ppersaut', 'pwaoreg','pbrand','aplezier','afiets']
+    columns = ['MOPLLAAG', 'MINK123M', 'PPERSAUT', 'PWAOREG','PBRAND','APLEZIER','AFIETS']
     for y in range(0,len(listas[0])):
         tmp = []
         for x in listas:
@@ -92,4 +99,4 @@ def prediccion(listas):
     modelo, precision, recall, df_c = modelado()
     y_pred = modelo.predict(listas)
     df['pred'] = pd.Series(y_pred)
-    return y_pred
+    return y_pred[0]
