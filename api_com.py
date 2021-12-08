@@ -8,6 +8,8 @@ import pickle as pkl
 import sklearn
 import numpy as np
 import pandas as pd
+from src.utils import utils
+
 database_uri = "postgresql://postgres:postgres@db:5432/postgres"
 app = Flask(__name__)
 conn = psycopg2.connect(database_uri)
@@ -43,7 +45,8 @@ def user():
 def users():
     if request.method == "GET":
         modelo, precision, recall = utils.modelado(1)
-        return "El modelo se ha reentrenado adecuadamente"
+        return json.dumps({"Modelo entrenado correctamente": modelo.astype(str), "precisión": precision.astype(str), "recall": recall.astype(str)})
+        #return "El modelo se ha reentrenado adecuadamente"
     if request.method == "POST":
         inputs = request.json
         predecir = inputs["predecir"]
