@@ -138,7 +138,7 @@ Se necesita un equipo de computo con acceso a internet, un sistema operativo Lin
 	7. Exportar la variable de ambiente: <export PYTHONPATH=$PWD>
 	8. Correr el comando de Bash: <bash data_process.sh> con lo que se descarga la base de datos de Caravanas y se hace la limpieza. La salida se persiste en un volumen creado en local al que se puede acceder desde el contenedor
 	9. Ejecutar el script de python: <python src/utils/pdDF_to_SQL.py> que hace la lectura del archivo procesado por Bash y lo coloca en una tabla de PostgreSQL
-	Nota: Para verivicar la creación de esta tabla, ejecutar: <psql -U postgres -h db -d postgres> para ingresar al servidor de psql y dentro de este explorar la tabla creada ("variables")
+	Nota: Para verivicar la creación de esta tabla, abrir el contenedor con la base de datos con: <docker excec -it db_ramis bash> y ejecutar: <psql -U postgres -h db -d postgres> para ingresar al servidor de psql y dentro de este explorar la tabla creada ("variables")
 	10. Abrir una terminal de python y ejecutar: <from src.utils import utils> y <modelo, precision, recall = modelado()> con esto se hace el primer modelo que corresponde a la ingesta inicial y con el cual ya se pueden hacer predicciones desde la API. El modelo se guarda en un archivo binario (.pkl)
 	11. Colocarse en un navegador y accesar a la dirección: <http://0.0.0.0:8080/> Esto desplegará los primeros 10 registros de la base de datos (informativo)
 	
