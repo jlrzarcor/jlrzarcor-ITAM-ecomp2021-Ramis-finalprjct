@@ -146,9 +146,24 @@ Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente
 Se necesita un equipo de computo con acceso a internet, un sistema operativo Linux y Docker instalado.
 
 ### Ejecución  :clapper:
-	1. clonar este repositorio en la computadora local.
-	2. Correr la carpeta raíz el comando `docker-compose build`.
-	3. Correr la carpeta raíz el comando `docker-compose run`.
-	4. ...
-	5. ...
+	1. clonar este repositorio en la computadora local (en el directoro de su preferencia)
+	2. Abrir una terminal CLI y colocarse en la raíz del repositorio clonado en el paso anterior
+	3. Ejecutar comando: <docker-compose up --build> con lo que se construye nuestra imagen de Docker
+	4. Ejecutar comando: <docker exec -it web_ramis bash> con lo que se accede al contenedor
+	5. En la terminal que ya es del contenedor abierto posicionarse en la carpeta con el siguiente nombre: jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct
+	6. Activar el ambiente virtual de conda: _conda activate est_comp_
+	7. Exportar la variable de ambiente: <export PYTHONPATH=$PWD>
+	8. Correr el comando de Bash: <bash data_process.sh> con lo que se descarga la base de datos de Caravanas y se hace la limpieza. La salida se persiste en un volumen creado en local al que se puede acceder desde el contenedor
+	9. Ejecutar el script de python: <python src/utils/pdDF_to_SQL.py> que hace la lectura del archivo procesado por Bash y lo coloca en una tabla de PostgreSQL
+	Nota: Para verivicar la creación de esta tabla, ejecutar: <psql -U postgres -h db -d postgres> para ingresar al servidor de psql y dentro de este explorar la tabla creada ("variables")
+	10. Abrir una terminal de python y ejecutar: <from src.utils import utils> y <modelo, precision, recall = modelado()> con esto se hace el primer modelo que corresponde a la ingesta inicial y con el cual ya se pueden hacer predicciones desde la API. El modelo se guarda en un archivo binario (.pkl)
+	11. Colocarse en un navegador y accesar a la dirección: <http://0.0.0.0:8080/> Esto desplegará los primeros 10 registros de la base de datos (informativo)
+	
+	Para realizar una predicción:
+	Colocarse en una terminal CLI de su máquina local y ejecutar un comando de _curl_ como el siguiente ejemplo:
+	
+	curl -X POST -H "Content-Type: application/json" -d '{"predecir":{"mopllaag":1, "mink123m":2, "ppersaut":3, "pwaoreg":4,"pbrand":5,"aplezier":6,"afiets":7}}' 0.0.0.0:8080/users
+	
+	Nota: Los valores de cada llave corresponden a los valores que tendría una nueva observación de la cual queremos hacer su predicción
+
 [Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
