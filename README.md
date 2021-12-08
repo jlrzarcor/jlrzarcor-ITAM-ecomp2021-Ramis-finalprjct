@@ -153,5 +153,7 @@ Se necesita un equipo de computo con acceso a internet, un sistema operativo Lin
 	Colocarse en un <localhost> y poner la siguiente dirección:
 	
 	http://0.0.0.0:8080/users
+	
+	Esto nos devolverá un mensaje con el modelo que se utilizó (Regresión Logística) y las métricas que fueron de interés: Precisión y Recall
 
 [Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
