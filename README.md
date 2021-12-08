@@ -36,7 +36,6 @@
     - 4.1 [Problema que resuelve](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#problema-que-resuelve--grey_question)
     - 4.2 [Especificaciones](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#especificaciones--clipboard)
     - 4.3 [Funcionamiento](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#funcionamiento--video_game)
-    - 4.4 [Resultados](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#resultados--bar_chart)
 5. [¿Cómo correr el proyecto?](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#c%C3%B3mo-correr-el-proyecto)
 
 ---
@@ -124,22 +123,6 @@ Por separado, existirá otra API (también creada en _Flask_) que se utilizará 
 
 [Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)	
 
-### Resultados  :bar_chart:
-
-Lo que esperamos observar cuando se logre ejecutar este proyecto es lo siguiente:
-
-+ API para el modelo _On Demand_
-
-<p align = "center">
-    <img src="images/API_1.png" width="300" height="110" />
-
-+ API para el proceso de ingesta consecutiva y reentrenamieto:
-
-<p align = "center">
-    <img src="images/API_2.png" width="300" height="110" />
-
-[Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
-	
 ## ¿Cómo correr el proyecto? 
 
 ### Prerrequisitos  :computer:
