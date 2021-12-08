@@ -134,7 +134,7 @@ Se necesita un equipo de computo con acceso a internet, un sistema operativo Lin
 	3. Ejecutar comando: <docker-compose up --build> con lo que se construye nuestra imagen de Docker
 	4. Ejecutar comando: <docker exec -it web_ramis bash> con lo que se accede al contenedor
 	5. En la terminal que ya es del contenedor abierto posicionarse en la carpeta con el siguiente nombre: jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct
-	6. Activar el ambiente virtual de conda: _conda activate est_comp_
+	6. Activar el ambiente virtual de conda: <conda activate est_comp>
 	7. Exportar la variable de ambiente: <export PYTHONPATH=$PWD>
 	8. Correr el comando de Bash: <bash data_process.sh> con lo que se descarga la base de datos de Caravanas y se hace la limpieza. La salida se persiste en un volumen creado en local al que se puede acceder desde el contenedor
 	9. Ejecutar el script de python: <python src/utils/pdDF_to_SQL.py> que hace la lectura del archivo procesado por Bash y lo coloca en una tabla de PostgreSQL
