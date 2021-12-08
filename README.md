@@ -143,10 +143,15 @@ Se necesita un equipo de computo con acceso a internet, un sistema operativo Lin
 	11. Colocarse en un navegador y accesar a la dirección: <http://0.0.0.0:8080/> Esto desplegará los primeros 10 registros de la base de datos (informativo)
 	
 	Para realizar una predicción:
-	Colocarse en una terminal CLI de su máquina local y ejecutar un comando de _curl_ como el siguiente ejemplo:
+	Colocarse en una terminal CLI de su máquina local y ejecutar un comando de <curl> como el siguiente ejemplo:
 	
 	curl -X POST -H "Content-Type: application/json" -d '{"predecir":{"mopllaag":1, "mink123m":2, "ppersaut":3, "pwaoreg":4,"pbrand":5,"aplezier":6,"afiets":7}}' 0.0.0.0:8080/users
 	
 	Nota: Los valores de cada llave corresponden a los valores que tendría una nueva observación de la cual queremos hacer su predicción
+	
+	Para reentrenar el modelo:
+	Colocarse en un <localhost> y poner la siguiente dirección:
+	
+	http://0.0.0.0:8080/users
 
 [Regresar](https://github.com/jlrzarcor/jlrzarcor-ITAM-ecomp2021-Ramis-finalprjct#tabla-de-contenido--bookmark_tabs)
